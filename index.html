@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR. DORN — Строительство и ремонт домов под ключ в Москве и МО</title>
+  <meta name="description" content="Строим современные дома бизнес и премиум-класса в Москве и Московской области с полной ответственностью за результат. Свыше 60 реализованных проектов.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="logo">
+        <span class="logo__title">MR. DORN</span>
+        <span class="logo__subtitle">БИЗНЕС И ПРЕМИУМ-КЛАСС ДОМА</span>
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#projects" class="nav__link">Проекты</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
+          <li class="nav__item"><a href="#process" class="nav__link">Как строим</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
+          <li class="nav__item"><a href="#cost" class="nav__link">Стоимость</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header__contacts">
+        <a href="tel:+79884024294" class="phone-link">+7 988 402-42-94</a>
+        <button class="btn btn--small btn--primary js-open-consultation">Получить консультацию</button>
+      </div>
+
+      <button class="burger-btn" aria-label="Открыть меню">
+        <span class="burger-btn__bar"></span>
+        <span class="burger-btn__bar"></span>
+        <span class="burger-btn__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__overlay"></div>
+    <div class="mobile-menu__content">
+      <button class="mobile-menu__close" aria-label="Закрыть меню">&times;</button>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a href="#projects" class="mobile-menu__link">Проекты</a></li>
+        <li class="mobile-menu__item"><a href="#services" class="mobile-menu__link">Услуги</a></li>
+        <li class="mobile-menu__item"><a href="#process" class="mobile-menu__link">Как строим</a></li>
+        <li class="mobile-menu__item"><a href="#about" class="mobile-menu__link">О компании</a></li>
+        <li class="mobile-menu__item"><a href="#cost" class="mobile-menu__link">Стоимость</a></li>
+        <li class="mobile-menu__item"><a href="#contacts" class="mobile-menu__link">Контакты</a></li>
+      </ul>
+      <div class="mobile-menu__contacts">
+        <a href="tel:+79884024294" class="mobile-menu__phone">+7 988 402-42-94</a>
+        <button class="btn btn--primary js-open-consultation">Получить консультацию</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <div class="container hero__container">
+        <div class="hero__info">
+          <span class="section-tag section-tag--light">СТРОИТЕЛЬСТВО И РЕМОНТ ДОМОВ ПОД КЛЮЧ</span>
+          <h1 class="hero__title">Создаем дома,<br>в которых хочется<br>прожить всю жизнь</h1>
+          <p class="hero__descr">Строим современные дома бизнес и премиум-класса в Москве и Московской области с полной ответственностью за результат</p>
+          
+          <div class="hero__actions">
+            <button class="btn btn--primary js-open-consultation">Получить консультацию</button>
+            <a href="#projects" class="btn btn--outline">Смотреть проекты</a>
+          </div>
+          
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num">12+</span>
+              <span class="hero__stat-text">лет опыта</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">60+</span>
+              <span class="hero__stat-text">реализованных проектов</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">до 3 лет</span>
+              <span class="hero__stat-text">гарантия на работы</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__director">
+          <img src="assets/img/directors/robert.jpg" alt="Роберт Дорн" class="hero__director-img">
+          
+          <div class="director-card">
+            <div class="director-card__avatar">
+              <img src="assets/img/directors/robert.jpg" alt="Роберт Дорн мини">
+            </div>
+            <div class="director-card__info">
+              <h3 class="director-card__name">Роберт Дорн</h3>
+              <p class="director-card__role">Девелопер. Лично контролирую каждый проект от идеи до сдачи.</p>
+              <button class="director-card__video-btn js-play-video">
+                <span class="play-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span>Смотреть видео обо мне <span class="video-duration">(1 мин)</span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner Logos Section -->
+    <section class="partners">
+      <div class="container">
+        <p class="partners__title">Нам доверяют строительство своих домов</p>
+        <div class="partners__grid">
+          <div class="partner-logo">VILLAGIO</div>
+          <div class="partner-logo">Millennium <span class="accent-font">PARK</span></div>
+          <div class="partner-logo">Ренессанс</div>
+          <div class="partner-logo">Vesper</div>
+          <div class="partner-logo">POINT</div>
+          <div class="partner-logo">NF GROUP</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Approach Section -->
+    <section class="approach">
+      <div class="container approach__container">
+        <div class="approach__text-side">
+          <span class="section-tag section-tag--dark">мой подход</span>
+          <h2 class="section-title section-title--dark">Я лично отвечаю<br>за результат</h2>
+          <div class="approach__description">
+            <p>Для меня дом — это не просто проект. Это пространство для жизни вашей семьи. Поэтому я контролирую каждый этап лично и несу полную ответственность за качество и сроки.</p>
+          </div>
+          <div class="approach__signature">
+            <span class="signature-font">Роберт Дорн</span>
+          </div>
+        </div>
+        
+        <div class="approach__image-side">
+          <img src="assets/img/directors/robert.jpg" alt="Роберт Дорн за работой" class="approach__img">
+        </div>
+        
+        <div class="approach__features-side">
+          <div class="approach-feature">
+            <div class="approach-feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/>
+              </svg>
+            </div>
+            <div class="approach-feature__content">
+              <h4 class="approach-feature__title">Личный контроль</h4>
+              <p class="approach-feature__text">Лично контролирую ключевые этапы работ и принимаю важные решения.</p>
+            </div>
+          </div>
+
+          <div class="approach-feature">
+            <div class="approach-feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/>
+                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+              </svg>
+            </div>
+            <div class="approach-feature__content">
+              <h4 class="approach-feature__title">Прозрачность</h4>
+              <p class="approach-feature__text">Вы всегда знаете, на каком этапе ваш проект и за что платите.</p>
+            </div>
+          </div>
+
+          <div class="approach-feature">
+            <div class="approach-feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/>
+              </svg>
+            </div>
+            <div class="approach-feature__content">
+              <h4 class="approach-feature__title">Качество без компромиссов</h4>
+              <p class="approach-feature__text">Используем только проверенные материалы и надежные технологии.</p>
+            </div>
+          </div>
+
+          <div class="approach-feature">
+            <div class="approach-feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+              </svg>
+            </div>
+            <div class="approach-feature__content">
+              <h4 class="approach-feature__title">Соблюдение сроков</h4>
+              <p class="approach-feature__text">Четкое планирование и дисциплина команды — сдаем объекты в срок.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Realized Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container projects__container">
+        <div class="projects__header">
+          <div class="projects__title-block">
+            <span class="section-tag section-tag--light">РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</span>
+            <h2 class="section-title">Дома, которыми<br>мы гордимся</h2>
+          </div>
+          <button class="btn btn--outline js-open-all-projects">Смотреть все проекты</button>
+        </div>
+
+        <div class="projects__grid">
+          <!-- Card 1 -->
+          <article class="project-card" data-project="milenium">
+            <div class="project-card__img-wrapper">
+              <img src="assets/img/projects/milenium/1.jpg" alt="Резиденция в Миллениум Парк" class="project-card__img">
+              <div class="project-card__badge">Смотреть галерею</div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Резиденция в «Миллениум Парк»</h3>
+              <div class="project-card__meta">
+                <span class="project-card__area">650 м²</span>
+                <span class="project-card__divider"></span>
+                <span class="project-card__loc">Московская область</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card" data-project="zakharkovo">
+            <div class="project-card__img-wrapper">
+              <img src="assets/img/projects/zakharkovo/1.jpg" alt="Дом в Ренессанс Парк" class="project-card__img">
+              <div class="project-card__badge">Смотреть галерею</div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Дом в «Ренессанс Парк»</h3>
+              <div class="project-card__meta">
+                <span class="project-card__area">480 м²</span>
+                <span class="project-card__divider"></span>
+                <span class="project-card__loc">Московская область</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card" data-project="sochi">
+            <div class="project-card__img-wrapper">
+              <!-- Using Millennium 2 photo for Sochi Seaside Villa representation -->
+              <img src="assets/img/projects/milenium/2.jpg" alt="Вилла на берегу моря" class="project-card__img">
+              <div class="project-card__badge">Смотреть галерею</div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Вилла на берегу моря</h3>
+              <div class="project-card__meta">
+                <span class="project-card__area">320 м²</span>
+                <span class="project-card__divider"></span>
+                <span class="project-card__loc">Сочи</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Build Section -->
+    <section class="process" id="process">
+      <div class="container process__container">
+        <div class="process__steps-side">
+          <span class="section-tag section-tag--dark">КАК МЫ СТРОИМ</span>
+          <h2 class="section-title section-title--dark">Четкий процесс —<br>идеальный результат</h2>
+          
+          <ol class="process-steps">
+            <li class="process-step">
+              <div class="process-step__number">01</div>
+              <div class="process-step__content">
+                <h4 class="process-step__title">Знакомство</h4>
+                <p class="process-step__text">Обсуждаем ваши цели, планировку, пожелания и определяем бюджет.</p>
+              </div>
+            </li>
+            
+            <li class="process-step">
+              <div class="process-step__number">02</div>
+              <div class="process-step__content">
+                <h4 class="process-step__title">Проектирование</h4>
+                <p class="process-step__text">Разрабатываем подробный архитектурно-строительный проект с учетом всех деталей.</p>
+              </div>
+            </li>
+            
+            <li class="process-step">
+              <div class="process-step__number">03</div>
+              <div class="process-step__content">
+                <h4 class="process-step__title">Смета и договор</h4>
+                <p class="process-step__text">Составляем прозрачную смету и фиксируем окончательную стоимость и сроки в договоре.</p>
+              </div>
+            </li>
+            
+            <li class="process-step">
+              <div class="process-step__number">04</div>
+              <div class="process-step__content">
+                <h4 class="process-step__title">Строительство</h4>
+                <p class="process-step__text">Выполняем все этапы строительно-монтажных работ с жестким контролем качества технадзором.</p>
+              </div>
+            </li>
+            
+            <li class="process-step">
+              <div class="process-step__number">05</div>
+              <div class="process-step__content">
+                <h4 class="process-step__title">Сдача объекта</h4>
+                <p class="process-step__text">Передаем полностью готовый к проживанию дом с гарантией на конструктив до 3 лет.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        
+        <div class="process__image-side">
+          <!-- Using high-res Millennium 5 interior shot for process showcase -->
+          <img src="assets/img/projects/milenium/5.jpg" alt="Интерьер гостиной с камином" class="process__img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="services__header">
+          <span class="section-tag section-tag--light">НАШИ УСЛУГИ</span>
+          <h2 class="section-title">Полный комплекс услуг<br>для вашего дома</h2>
+        </div>
+        
+        <div class="services__grid">
+          <!-- Service 1 -->
+          <div class="service-box">
+            <div class="service-box__icon">
+              <!-- House Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+            </div>
+            <h3 class="service-box__title">Строительство<br>домов под ключ</h3>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-box">
+            <div class="service-box__icon">
+              <!-- Paint roller Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9.53 16.122A3 3 0 0 0 13.04 18.2h5.716A2.225 2.225 0 0 0 21 15.975V11.8M9.53 16.122a3 3 0 0 1-3.51-2.078l-3.142-9.67a1.1 1.1 0 0 1 1.047-1.44h11.4A1.1 1.1 0 0 1 16.37 6.13l-1.9 5.845a3 3 0 0 1-2.47 2.01l-2.47.388Z" />
+                <path d="M12 18.2v3.3M9.75 21.5h4.5" />
+              </svg>
+            </div>
+            <h3 class="service-box__title">Ремонт и отделка<br>под ключ</h3>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-box">
+            <div class="service-box__icon">
+              <!-- Ruler / Compass Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="m9.083 9.083 4.292 4.292m-4.292 0 4.292-4.292m-5.467 9.034 11.01-11.01a1.5 1.5 0 0 1 2.122 2.122L9.832 20.239a1.5 1.5 0 0 1-2.122 0l-2.094-2.094a1.5 1.5 0 0 1 0-2.122Z" />
+              </svg>
+            </div>
+            <h3 class="service-box__title">Дизайн<br>интерьера</h3>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-box">
+            <div class="service-box__icon">
+              <!-- Clipboard/Check Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z" />
+              </svg>
+            </div>
+            <h3 class="service-box__title">Технический надзор<br>и контроль качества</h3>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-box">
+            <div class="service-box__icon">
+              <!-- Key/Acceptance Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 1 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-3.75l7.912-7.912c.404-.404.527-1 .43-1.563A6 6 0 0 1 15.75 2.25Z" />
+              </svg>
+            </div>
+            <h3 class="service-box__title">Приемка дома<br>от застройщика</h3>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-box">
+            <div class="service-box__icon">
+              <!-- Map/Land Icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 6.75 3 4.5v12.75l6 2.25m0-12.75 6-2.25m-6 12.75 6-2.25m0-10.5 6 2.25v12.75l-6-2.25" />
+              </svg>
+            </div>
+            <h3 class="service-box__title">Девелопмент<br>земельных участков</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+      <div class="container why-us__container">
+        <div class="why-us__text-side">
+          <span class="section-tag section-tag--dark">ПОЧЕМУ НАМ ДОВЕРЯЮТ</span>
+          <h2 class="section-title section-title--dark">Мы не обещаем.<br>Мы делаем.</h2>
+          <p class="why-us__descr">Наши клиенты получают не просто дом, а уверенность в каждом строительном решении и гарантированный премиальный результат.</p>
+          
+          <div class="why-us__stats-grid">
+            <div class="why-us__stat-item">
+              <span class="why-us__stat-num">12+</span>
+              <span class="why-us__stat-label">лет опыта в строительстве</span>
+            </div>
+            <div class="why-us__stat-item">
+              <span class="why-us__stat-num">60+</span>
+              <span class="why-us__stat-label">реализованных проектов</span>
+            </div>
+            <div class="why-us__stat-item">
+              <span class="why-us__stat-num">до 3 лет</span>
+              <span class="why-us__stat-label">гарантия на работы</span>
+            </div>
+            <div class="why-us__stat-item">
+              <span class="why-us__stat-num">100%</span>
+              <span class="why-us__stat-label">довольных клиентов</span>
+            </div>
+          </div>
+
+          <button class="btn btn--primary js-open-consultation">Получить консультацию</button>
+        </div>
+        
+        <div class="why-us__image-side">
+          <!-- Using Millennium 8 high-res interior/kitchen image -->
+          <img src="assets/img/projects/milenium/8.jpg" alt="Современная премиум кухня" class="why-us__img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="cost">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-card__header">
+            <h2 class="contact-card__title">Обсудим ваш проект?</h2>
+            <p class="contact-card__subtitle">Оставьте заявку — мы свяжемся с вами в ближайшее время, ответим на все вопросы и поможем рассчитать стоимость.</p>
+          </div>
+          
+          <form class="contact-form" id="projectForm">
+            <div class="contact-form__fields">
+              <div class="form-group">
+                <input type="text" id="userName" name="name" class="form-input" placeholder="Ваше имя" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="userPhone" name="phone" class="form-input" placeholder="Телефон" required>
+              </div>
+              <button type="submit" class="btn btn--primary form-submit-btn">Отправить заявку</button>
+            </div>
+            
+            <div class="form-consent">
+              <label class="consent-checkbox-label">
+                <input type="checkbox" checked required class="consent-checkbox">
+                <span class="checkmark"></span>
+                <span class="consent-text">Я согласен на обработку персональных данных</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__container">
+      <div class="footer__top">
+        <a href="#" class="logo footer__logo">
+          <span class="logo__title">MR. DORN</span>
+          <span class="logo__subtitle">БИЗНЕС И ПРЕМИУМ-КЛАСС ДОМА</span>
+        </a>
+        
+        <ul class="footer__menu">
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#process">Как строим</a></li>
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#cost">Стоимость</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        
+        <div class="footer__contacts">
+          <a href="tel:+79884024294" class="footer__phone">+7 988 402-42-94</a>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11C4.483 20.455 12 20.455 12 20.455s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.58.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.94-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.37.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 MR. DORN. Все права защищены.</p>
+        <a href="#" class="footer__policy">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Gallery Modal -->
+  <div class="gallery-modal" id="galleryModal">
+    <div class="gallery-modal__overlay"></div>
+    <div class="gallery-modal__container">
+      <button class="gallery-modal__close" aria-label="Закрыть галерею">&times;</button>
+      <div class="gallery-modal__slider">
+        <button class="gallery-modal__arrow gallery-modal__arrow--prev" aria-label="Предыдущий слайд">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        
+        <div class="gallery-modal__slides-container">
+          <div class="gallery-modal__slides-track">
+            <!-- Slides dynamically generated by JS -->
+          </div>
+        </div>
+        
+        <button class="gallery-modal__arrow gallery-modal__arrow--next" aria-label="Следующий слайд">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      
+      <div class="gallery-modal__info">
+        <h3 class="gallery-modal__title">Название проекта</h3>
+        <p class="gallery-modal__counter"><span class="js-current-slide">1</span> / <span class="js-total-slides">10</span></p>
+      </div>
+
+      <div class="gallery-modal__thumbnails">
+        <!-- Thumbnails dynamically generated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal__overlay"></div>
+    <div class="video-modal__container">
+      <button class="video-modal__close" aria-label="Закрыть видео">&times;</button>
+      <div class="video-modal__body">
+        <div class="video-placeholder">
+          <div class="video-placeholder__content">
+            <div class="video-placeholder__play-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <h3>Роберт Дорн: Философия строительства</h3>
+            <p>Презентационное видео о компании (симуляция воспроизведения)</p>
+            <div class="video-timeline">
+              <div class="video-timeline__bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Consultation Modal -->
+  <div class="consultation-modal" id="consultationModal">
+    <div class="consultation-modal__overlay"></div>
+    <div class="consultation-modal__container">
+      <button class="consultation-modal__close" aria-label="Закрыть">&times;</button>
+      <div class="consultation-modal__header">
+        <h3 class="consultation-modal__title">Получить консультацию</h3>
+        <p class="consultation-modal__subtitle">Оставьте ваши контакты, и Роберт Дорн или наш ведущий архитектор свяжется с вами лично.</p>
+      </div>
+      <form class="consultation-form" id="modalForm">
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder="Ваше имя" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" class="form-input" placeholder="Телефон" required>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+        <div class="form-consent">
+          <label class="consent-checkbox-label">
+            <input type="checkbox" checked required class="consent-checkbox">
+            <span class="checkmark"></span>
+            <span class="consent-text">Я согласен на обработку персональных данных</span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

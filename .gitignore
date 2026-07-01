@@ -1,0 +1,9 @@
+# Ignore original raw unoptimized images to keep repository size small and fast to clone
+/Директора
+/захарково
+/милениум*
+"/милениум "
+
+# System files
+.DS_Store
+Thumbs.db
