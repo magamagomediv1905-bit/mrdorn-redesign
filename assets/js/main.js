@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Image Database for Galleries
   const projectGalleries = {
     milenium: {
-      title: 'Резиденция в «Миллениум Парк»',
+      title: 'Дом в КП «Миллениум парк»',
       images: [
         'assets/img/projects/milenium/1.jpg',
         'assets/img/projects/milenium/2.jpg',
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     zakharkovo: {
-      title: 'Дом в «Ренессанс Парк» (Захарково)',
+      title: 'Дом в Захарково',
       images: [
         'assets/img/projects/zakharkovo/1.jpg',
         'assets/img/projects/zakharkovo/2.jpg',
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     sochi: {
-      title: 'Вилла на берегу моря (Сочи)',
+      title: 'Дом в КП «Риверсайд»',
       images: [
         'assets/img/projects/milenium/2.jpg',
         'assets/img/projects/milenium/3.png',
