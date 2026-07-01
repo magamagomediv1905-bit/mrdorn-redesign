@@ -1075,16 +1075,15 @@ body {
 }
 
 .process__image-side {
-  height: 580px;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(63, 36, 25, 0.12);
 }
 
 .process__img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 @media (max-width: 992px) {
@@ -1093,7 +1092,7 @@ body {
     gap: 3.5rem;
   }
   .process__image-side {
-    height: 400px;
+    height: auto;
   }
 }
 
