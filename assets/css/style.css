@@ -494,8 +494,6 @@ body {
   max-height: 78vh;
   object-fit: contain;
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
-  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 .director-card {
