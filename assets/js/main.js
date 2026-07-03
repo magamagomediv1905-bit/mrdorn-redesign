@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
     zakharkovo: {
       title: 'Дом в Захарково',
       images: [
-        'assets/img/projects/zakharkovo/1.jpg',
         'assets/img/projects/zakharkovo/2.jpg',
+        'assets/img/projects/zakharkovo/1.jpg',
         'assets/img/projects/zakharkovo/3.jpg',
         'assets/img/projects/zakharkovo/4.jpg',
         'assets/img/projects/zakharkovo/5.jpg',
@@ -113,14 +113,16 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     sochi: {
-      title: 'Дом в КП «Риверсайд»',
+      title: 'Дом «Rafael» в КП «Риверсайд»',
       images: [
-        'assets/img/projects/milenium/2.jpg',
-        'assets/img/projects/milenium/3.png',
-        'assets/img/projects/milenium/6.jpg',
-        'assets/img/projects/milenium/7.jpg',
-        'assets/img/projects/zakharkovo/3.jpg',
-        'assets/img/projects/zakharkovo/6.jpg'
+        'assets/img/projects/rafael/1.jpg',
+        'assets/img/projects/rafael/2.jpg',
+        'assets/img/projects/rafael/3.jpg',
+        'assets/img/projects/rafael/4.jpg',
+        'assets/img/projects/rafael/5.jpg',
+        'assets/img/projects/rafael/6.jpg',
+        'assets/img/projects/rafael/7.jpg',
+        'assets/img/projects/rafael/8.jpg'
       ]
     }
   };

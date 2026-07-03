@@ -1526,6 +1526,12 @@ body {
   color: rgba(255, 255, 255, 0.35);
 }
 
+.footer__legal {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
 .footer__policy {
   color: rgba(255, 255, 255, 0.35);
   text-decoration: none;
