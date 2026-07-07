@@ -274,6 +274,31 @@ body {
   color: var(--color-gold);
 }
 
+.header__social-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.header__social-link {
+  color: var(--color-text-white);
+  opacity: 0.65;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+}
+
+.header__social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.header__social-link:hover {
+  color: var(--color-gold);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 /* Burger Button */
 .burger-btn {
   display: none;
@@ -450,6 +475,25 @@ body {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 4.5rem;
+}
+
+@media (min-width: 577px) {
+  .hero__actions {
+    display: inline-flex;
+    gap: 0;
+    border: 1px solid var(--color-gold);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .hero__actions .btn {
+    border-radius: 0;
+    border: none;
+  }
+  
+  .hero__actions .btn--outline {
+    border-left: 1px solid var(--color-gold);
+  }
 }
 
 .hero__stats {
