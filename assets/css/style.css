@@ -494,6 +494,11 @@ body {
   .hero__actions .btn--outline {
     border-left: 1px solid var(--color-gold);
   }
+
+  .hero__actions .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 .hero__stats {
