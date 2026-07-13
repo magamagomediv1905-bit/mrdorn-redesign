@@ -442,12 +442,36 @@ body {
   overflow: hidden;
 }
 
+.hero__video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(13, 13, 13, 0.8) 35%, rgba(13, 13, 13, 0.25) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .hero__container {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 4rem;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__info {
@@ -661,6 +685,9 @@ body {
   .hero {
     padding-top: 7.5rem;
     background-image: linear-gradient(to bottom, rgba(13, 13, 13, 0.7) 50%, rgba(13, 13, 13, 0.3) 100%), url('../img/hero_bg.jpg');
+  }
+  .hero__video-overlay {
+    background-image: linear-gradient(to bottom, rgba(13, 13, 13, 0.8) 50%, rgba(13, 13, 13, 0.35) 100%);
   }
   .hero__container {
     grid-template-columns: 1fr;
