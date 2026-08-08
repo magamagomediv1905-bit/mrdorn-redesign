@@ -38,6 +38,23 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => toggleMobileMenu(false));
   });
 
+  // 2b. Site Switcher (Наши сайты)
+  const navSwitch = document.getElementById('navSwitch');
+  const navSwitchBtn = document.getElementById('navSwitchBtn');
+  if (navSwitch && navSwitchBtn) {
+    navSwitchBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navSwitch.classList.toggle('open');
+      navSwitchBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (!navSwitch.contains(e.target)) {
+        navSwitch.classList.remove('open');
+        navSwitchBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   // 3. Consultation Modal
   const consultationModal = document.getElementById('consultationModal');
   const openConsultationBtns = document.querySelectorAll('.js-open-consultation');

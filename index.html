@@ -26,18 +26,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=1.0.12">
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.13">
 </head>
 <body>
 
   <!-- Header Navigation -->
   <header class="header">
     <div class="container header__container">
-      <a href="#" class="logo">
-        <span class="logo__title">MR. DORN</span>
-        <span class="logo__subtitle">БИЗНЕС И ПРЕМИУМ-КЛАСС ДОМА</span>
-      </a>
-      
+      <div class="header__left">
+        <a href="#" class="logo">
+          <span class="logo__title">MR. DORN</span>
+          <span class="logo__subtitle">БИЗНЕС И ПРЕМИУМ-КЛАСС ДОМА</span>
+        </a>
+
+        <div class="nav-switch" id="navSwitch">
+          <button class="nav-switch-btn" id="navSwitchBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span>Наши сайты</span>
+            <svg class="nav-switch-chev" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-switch-menu" role="menu">
+            <span class="nav-switch-cap">Проекты компании KAYRA</span>
+            <a href="https://kayra-stroy.ru/" target="_blank" rel="noopener" role="menuitem"><b>KAYRA СТРОЙ <em>↗</em></b><span>Строительство домов под ключ</span></a>
+            <a href="https://kayragroup.ru/" target="_blank" rel="noopener" role="menuitem"><b>KAYRA GROUP <em>↗</em></b><span>Группа компаний</span></a>
+            <a href="#" class="cur" role="menuitem"><b>MR. DORN</b><span>Роберт Дорн · вы здесь</span></a>
+          </div>
+        </div>
+      </div>
+
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#projects" class="nav__link">Проекты</a></li>
@@ -77,6 +93,11 @@
     <div class="mobile-menu__overlay"></div>
     <div class="mobile-menu__content">
       <button class="mobile-menu__close" aria-label="Закрыть меню">&times;</button>
+      <div class="nav-sites-m">
+        <div class="nav-sites-m-cap">Проекты компании KAYRA</div>
+        <a href="https://kayra-stroy.ru/" target="_blank" rel="noopener">KAYRA СТРОЙ ↗</a>
+        <a href="https://kayragroup.ru/" target="_blank" rel="noopener">KAYRA GROUP ↗</a>
+      </div>
       <ul class="mobile-menu__list">
         <li class="mobile-menu__item"><a href="#projects" class="mobile-menu__link">Проекты</a></li>
         <li class="mobile-menu__item"><a href="#services" class="mobile-menu__link">Услуги</a></li>
@@ -541,18 +562,6 @@
         </div>
       </div>
       
-      <div class="footer__partners-links">
-        <span class="footer__partners-label">Наши компании:</span>
-        <a href="https://kayra-stroy.ru/" class="footer__partner-btn" target="_blank" rel="noopener">
-          <span>KAYRA STROY</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-        </a>
-        <a href="https://kayragroup.ru/" class="footer__partner-btn" target="_blank" rel="noopener">
-          <span>KAYRA GROUP</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-        </a>
-      </div>
-
       <div class="footer__bottom">
         <div class="footer__copyright-block">
           <p class="footer__copyright">© 2026 MR. DORN. Все права защищены.</p>
@@ -637,6 +646,6 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=1.0.12" defer></script>
+  <script src="assets/js/main.js?v=1.0.13" defer></script>
 </body>
 </html>

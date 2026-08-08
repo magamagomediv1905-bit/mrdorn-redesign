@@ -1618,62 +1618,167 @@ body {
   color: var(--color-gold);
 }
 
-.footer__partners-links {
+/* Site Switcher (Наши сайты) */
+.header__left {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 1.75rem;
 }
 
-.footer__partners-label {
-  font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.4);
-  margin-right: 0.25rem;
+.nav-switch {
+  position: relative;
 }
 
-.footer__partner-btn {
+.nav-switch-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.25rem;
-  border: 1px solid rgba(197, 164, 126, 0.4);
-  border-radius: 4px;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-switch-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.nav-switch-chev {
+  transition: transform 0.35s ease;
+}
+
+.nav-switch.open .nav-switch-chev {
+  transform: rotate(180deg);
+}
+
+.nav-switch-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  min-width: 272px;
+  background: var(--color-dark-surface);
+  border: 1px solid var(--color-dark-border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-premium);
+  padding: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: var(--transition-smooth);
+  z-index: 130;
+}
+
+.nav-switch.open .nav-switch-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.nav-switch-cap {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--color-text-gray);
+  padding: 6px 12px 12px;
+}
+
+.nav-switch-menu a {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 12px;
+  border-radius: 10px;
   color: #fff;
   text-decoration: none;
-  font-size: 0.8125rem;
+  transition: var(--transition-fast);
+}
+
+.nav-switch-menu a:hover {
+  background: rgba(197, 164, 126, 0.1);
+}
+
+.nav-switch-menu a.cur {
+  background: rgba(197, 164, 126, 0.14);
+}
+
+.nav-switch-menu a b {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.footer__partner-btn svg {
-  width: 15px;
-  height: 15px;
+.nav-switch-menu a b em {
+  font-style: normal;
   color: var(--color-gold);
-  transition: var(--transition-fast);
+  font-size: 0.75rem;
 }
 
-.footer__partner-btn:hover {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-  color: var(--color-brown);
+.nav-switch-menu a span {
+  font-size: 0.72rem;
+  color: var(--color-text-gray);
+  letter-spacing: 0.01em;
+  line-height: 1.4;
 }
 
-.footer__partner-btn:hover svg {
-  color: var(--color-brown);
-  transform: translate(2px, -2px);
+/* Mobile site switcher */
+.nav-sites-m {
+  display: none;
 }
 
-@media (max-width: 576px) {
-  .footer__partners-links {
-    gap: 0.75rem;
+@media (max-width: 992px) {
+  .nav-switch {
+    display: none;
   }
-  .footer__partner-btn {
-    flex: 1 1 auto;
-    justify-content: center;
+  .nav-sites-m {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    padding-bottom: 26px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(197, 164, 126, 0.2);
+  }
+  .nav-sites-m-cap {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-text-gray);
+    margin-bottom: 2px;
+  }
+  .nav-sites-m a {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 18px;
+    border: 1px solid rgba(197, 164, 126, 0.3);
+    border-radius: 100px;
+    text-align: center;
+    transition: var(--transition-fast);
+  }
+  .nav-sites-m a:hover {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: var(--color-brown);
   }
 }
 
