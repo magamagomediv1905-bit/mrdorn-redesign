@@ -65,16 +65,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const playVideoBtns = document.querySelectorAll('.js-play-video');
   const closeVideoBtn = videoModal.querySelector('.video-modal__close');
   const videoOverlay = videoModal.querySelector('.video-modal__overlay');
+  const vizitkaVideo = document.getElementById('vizitkaVideo');
 
   const toggleVideoModal = (open) => {
     if (open) {
       videoModal.classList.add('video-modal--open');
       document.body.style.overflow = 'hidden';
+      if (vizitkaVideo) {
+        const playPromise = vizitkaVideo.play();
+        if (playPromise && playPromise.catch) playPromise.catch(() => {});
+      }
     } else {
       videoModal.classList.remove('video-modal--open');
       document.body.style.overflow = '';
+      if (vizitkaVideo) {
+        vizitkaVideo.pause();
+        vizitkaVideo.currentTime = 0;
+      }
     }
   };
+
+  // Close video on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoModal.classList.contains('video-modal--open')) {
+      toggleVideoModal(false);
+    }
+  });
 
   playVideoBtns.forEach(btn => {
     btn.addEventListener('click', () => toggleVideoModal(true));
@@ -255,19 +271,69 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 7. Form Submission Simulation & Thank-You UI
+  // 7. Form Submission -> Web3Forms (email delivery) & Thank-You UI
+  // ВАЖНО: вставьте сюда Access Key с https://web3forms.com
+  // Заявки будут приходить на почту, указанную при получении ключа: kayra-group@mail.ru
+  // (зайдите на web3forms.com -> введите kayra-group@mail.ru -> получите ключ на эту почту -> вставьте между кавычек)
+  const WEB3FORMS_ACCESS_KEY = 'b41e54d6-60bf-47e3-875a-86925a56cb24';
+
   const projectForm = document.getElementById('projectForm');
   const modalForm = document.getElementById('modalForm');
 
-  const handleFormSubmit = (e, formType) => {
+  const handleFormSubmit = async (e, formType) => {
     e.preventDefault();
-    const nameInput = e.target.querySelector('input[type="text"]');
-    const phoneInput = e.target.querySelector('input[type="tel"]');
-    
+    const form = e.target;
+    const nameInput = form.querySelector('input[type="text"]');
+    const phoneInput = form.querySelector('input[type="tel"]');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
     const name = nameInput ? nameInput.value.trim() : '';
     const phone = phoneInput ? phoneInput.value.trim() : '';
 
     if (!name || !phone) return;
+
+    // Отправка заявки на email через Web3Forms
+    const originalBtnText = submitBtn ? submitBtn.textContent : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Отправляем...';
+    }
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: 'Новая заявка с сайта MR. DORN',
+          from_name: 'Сайт MR. DORN',
+          name: name,
+          phone: phone,
+          Источник: formType === 'modal' ? 'Форма консультации' : 'Форма на странице'
+        })
+      });
+
+      const result = await response.json();
+      if (!result.success) {
+        throw new Error(result.message || 'Ошибка отправки');
+      }
+    } catch (err) {
+      console.error('Ошибка отправки заявки:', err);
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+      showErrorNotification();
+      return;
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    }
 
     // Close consultation modal if open
     toggleConsultationModal(false);
@@ -316,6 +382,44 @@ document.addEventListener('DOMContentLoaded', () => {
       notification.style.opacity = '0';
     }, 6000);
   };
+
+  // Уведомление об ошибке отправки
+  function showErrorNotification() {
+    let errNote = document.getElementById('errorNotification');
+    if (!errNote) {
+      errNote = document.createElement('div');
+      errNote.id = 'errorNotification';
+      errNote.style.cssText = `
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #151515;
+        border: 1px solid #b5473e;
+        color: #fff;
+        padding: 1.5rem 2rem;
+        border-radius: 4px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 999;
+        max-width: 360px;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      `;
+      document.body.appendChild(errNote);
+    }
+    errNote.innerHTML = `
+      <h4 style="font-family: 'Playfair Display', serif; color: #d98a83; font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: normal;">Не удалось отправить</h4>
+      <p style="font-size: 0.85rem; color: #a3a3a3; line-height: 1.5;">Пожалуйста, позвоните нам напрямую: <strong>+7 988 402-42-94</strong> или попробуйте ещё раз.</p>
+    `;
+    setTimeout(() => {
+      errNote.style.transform = 'translateY(0)';
+      errNote.style.opacity = '1';
+    }, 100);
+    setTimeout(() => {
+      errNote.style.transform = 'translateY(100px)';
+      errNote.style.opacity = '0';
+    }, 7000);
+  }
 
   if (projectForm) {
     projectForm.addEventListener('submit', (e) => handleFormSubmit(e, 'main'));
